@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MatFormField, MatLabel } from '@angular/material/form-field';
-import {FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
-import {MatButton} from '@angular/material/button';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { MatButton } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { PayrollService } from '../../service/payroll.service';
 import { Observable } from 'rxjs';
@@ -18,7 +18,7 @@ import { PayrollComponent } from "../payroll/payroll.component";
 export class CalculateTaxComponent {
   payrollCalculation$?: Observable<Payroll>;
   taxCalculationFormGroup = new FormGroup({
-    salaryInputField: new FormControl('', [Validators.required])
+    salaryInputField: new FormControl('', [Validators.required, Validators.min(0)])
   });
 
   constructor(private service:PayrollService)
