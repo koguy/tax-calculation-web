@@ -1,0 +1,22 @@
+<form 
+    [formGroup]="taxCalculationFormGroup">
+    <mat-form-field appearance="fill">
+        <mat-label>Gross Annual Salary</mat-label>
+        <input 
+            type="number"
+            matInput 
+            formControlName="salaryInputField"
+            name="income"
+            placeholder="Enter value"
+            required />
+    </mat-form-field>
+    <button
+        type="submit"
+        mat-raised-button
+        color="primary"
+        (click)="onFormSubmitCalculateTax()">
+        Calculate
+    </button>
+</form>
+<app-payroll [payroll]="payrollCalculation$ | async"></app-payroll>
+
