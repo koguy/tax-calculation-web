@@ -10,6 +10,7 @@
             required />
     </mat-form-field>
     <button
+        [disabled]="isLoading"
         type="submit"
         mat-raised-button
         color="primary"
@@ -17,5 +18,12 @@
         Calculate
     </button>
 </form>
-<app-payroll [payroll]="payrollCalculation$ | async"></app-payroll>
+@if(isLoading)
+{
+    <mat-progress-spinner mode="indeterminate" color="primary"></mat-progress-spinner>
+}
+@else
+{
+    <app-payroll [payroll]="payrollCalculation$ | async"></app-payroll>
+}
 
