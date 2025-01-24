@@ -9,6 +9,5 @@ import { CalculateTaxComponent } from './component/calculate-tax/calculate-tax.c
 })
 export class AppComponent {
   title = 'client';
-
 }
 

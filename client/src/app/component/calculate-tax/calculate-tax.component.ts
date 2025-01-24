@@ -4,7 +4,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { MatButton } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { PayrollService } from '../../service/payroll.service';
-import { finalize, map, Observable, take } from 'rxjs';
+import { finalize, Observable, take } from 'rxjs';
 import { Payroll } from '../../model/Payroll';
 import { CommonModule } from '@angular/common';
 import { PayrollComponent } from "../payroll/payroll.component";
