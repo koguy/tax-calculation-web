@@ -39,7 +39,7 @@ export class CalculateTaxComponent {
     if (this.taxCalculationFormGroup.invalid) return;
 
     this.isLoading = true;
-    const salary = this.taxCalculationFormGroup.controls.salaryInputField.value as unknown as number;
+    const salary = Number(this.taxCalculationFormGroup.controls.salaryInputField.value);
     
     this.payrollCalculation$ = 
       this.service.calculate(salary).pipe(
